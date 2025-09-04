@@ -6,5 +6,5 @@ Foi utilizado um banco de dados em MySQL.
 Código dos participantes(RM):
 - Davi {565619}
 - Caique {563621}
-- Alexande {565626}
+- Rickelmy {563286}
 - Luiz {565009}
