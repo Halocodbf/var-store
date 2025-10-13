@@ -172,7 +172,7 @@ if __name__ == "__main__":
         elif opcao == "6":
             codigo = input("Digite o código do produto: ")
             produto = estoque.buscar_produto(codigo)
-            print(produto if produto else "❌ Produto não encontrado.")
+            print(produto if produto else "Produto não encontrado.")
         elif opcao == "0":
             print("Encerrando o sistema...")
             break
