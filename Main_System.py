@@ -81,34 +81,34 @@ class Estoque:
 
     def cadastrar_produto(self, produto):
         if produto.codigo.codigo in self.produtos:
-            print("⚠️ Produto com este código já existe.")
+            print("Produto com este código já existe.")
         else:
             self.produtos[produto.codigo.codigo] = produto
-            print("✅ Produto cadastrado com sucesso!")
+            print("Produto cadastrado com sucesso!")
 
     def adicionar_estoque(self, codigo, quantidade):
         if codigo in self.produtos:
             self.produtos[codigo].quantidade.quantidade += quantidade
-            print("✅ Estoque atualizado.")
+            print("Estoque atualizado.")
         else:
-            print("❌ Produto não encontrado.")
+            print("Produto não encontrado.")
 
     def remover_estoque(self, codigo, quantidade):
         if codigo in self.produtos:
             if self.produtos[codigo].quantidade.quantidade >= quantidade:
                 self.produtos[codigo].quantidade.quantidade -= quantidade
-                print("✅ Quantidade removida do estoque.")
+                print("Quantidade removida do estoque.")
             else:
-                print("⚠️ Quantidade insuficiente em estoque.")
+                print("Quantidade insuficiente em estoque.")
         else:
-            print("❌ Produto não encontrado.")
+            print("Produto não encontrado.")
 
     def ajustar_estoque(self, codigo, nova_quantidade):
         if codigo in self.produtos:
             self.produtos[codigo].quantidade.quantidade = nova_quantidade
-            print("✅ Estoque ajustado.")
+            print("Estoque ajustado.")
         else:
-            print("❌ Produto não encontrado.")
+            print("Produto não encontrado.")
 
     def listar_produtos(self):
         print("\n=== Produtos em Estoque ===")
@@ -117,7 +117,7 @@ class Estoque:
         for produto in self.produtos.values():
             print(produto)
             if produto.quantidade.quantidade < 5:
-                print("⚠️ Estoque baixo!")
+                print("Estoque baixo!")
 
     def buscar_produto(self, codigo):
         return self.produtos.get(codigo, None)
@@ -177,4 +177,4 @@ if __name__ == "__main__":
             print("Encerrando o sistema...")
             break
         else:
-            print("⚠️ Opção inválida. Tente novamente.")
+            print("Opção inválida. Tente novamente.")
