@@ -132,7 +132,7 @@ if __name__ == "__main__":
         print("8 - Aplicar desconto")
         print("9 - Histórico de movimentações")
         print("10 - Relatório de vendas")
-        print("11 - Relatório de Estoque (simplificado)")
+        print("11 - Relatório de Estoque")
         print("0 - Sair")
 
         opcao = input("Escolha uma opção: ")
