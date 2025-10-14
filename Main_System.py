@@ -119,7 +119,6 @@ if __name__ == "__main__":
     estoque = Estoque()
     registro_vendas = RegistroVendas()
     operacoes = OperacoesVenda(estoque)
-    historico = []  # lista usada pelo módulo movimentacao.py
 
     while True:
         print("\n=== Sistema de Gestão de Varejo ===")
@@ -133,6 +132,7 @@ if __name__ == "__main__":
         print("8 - Aplicar desconto")
         print("9 - Histórico de movimentações")
         print("10 - Relatório de vendas")
+        print("11 - Relatório de Estoque (simplificado)")
         print("0 - Sair")
 
         opcao = input("Escolha uma opção: ")
@@ -176,6 +176,9 @@ if __name__ == "__main__":
 
         elif opcao == "10":
             registro_vendas.gerar_relatorio()
+        
+        elif opcao == "11":
+            relatorio_estoque(estoque)
 
         elif opcao == "0":
             print("Encerrando o sistema...")
