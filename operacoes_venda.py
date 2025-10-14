@@ -27,20 +27,20 @@ class OperacoesVenda:
             return
 
         # Verifica e atualiza o estoque automaticamente
-        if produto.quantidade.quantidade < quantidade:
+        if produto.quantidade < quantidade:
             print(" Quantidade insuficiente em estoque.")
             return
 
-        produto.quantidade.quantidade -= quantidade
-        valor_total = produto.preco.preco * quantidade
+        produto.quantidade -= quantidade
+        valor_total = produto.preco * quantidade
 
         # Salva a venda
         venda = {
             "data": datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"),
-            "produto": produto.nome.nome_produto,
-            "codigo": produto.codigo.codigo,
+            "produto": produto.nome_produto,
+            "codigo": produto.codigo,
             "quantidade": quantidade,
-            "preco_unitario": produto.preco.preco,
+            "preco_unitario": produto.preco,
             "valor_total": valor_total
         }
         self.vendas_realizadas.append(venda)
