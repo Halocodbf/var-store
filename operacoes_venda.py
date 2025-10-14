@@ -12,7 +12,7 @@ class OperacoesVenda:
         produto = self.estoque.buscar_produto(codigo)
         if not produto:
             print("Produto não encontrado.")
-            return
+            return None
 
         print(f"Produto: {produto.nome_produto} | Estoque atual: {produto.quantidade}")
 
@@ -29,7 +29,7 @@ class OperacoesVenda:
         # Verifica e atualiza o estoque automaticamente
         if produto.quantidade < quantidade:
             print(" Quantidade insuficiente em estoque.")
-            return
+            return None
 
         produto.quantidade -= quantidade
         valor_total = produto.preco.preco_final * quantidade
@@ -48,6 +48,8 @@ class OperacoesVenda:
         # Gera recibo automaticamente
         self.gerar_recibo(venda)
         print(" Venda registrada e recibo emitido com sucesso.")
+        
+        return venda
 
     def gerar_recibo(self, venda):
         print("\n=== RECIBO DE VENDA ===")

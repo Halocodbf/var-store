@@ -165,8 +165,9 @@ if __name__ == "__main__":
             print(produto if produto else "Produto não encontrado.")
 
         elif opcao == "7":
-            operacoes.registrar_venda()
-            registro_vendas.registrar_venda("Venda registrada via OperacoesVenda")
+            dados_da_venda = operacoes.registrar_venda()
+            if dados_da_venda:
+                registro_vendas.registrar_venda(dados_da_venda)
 
         elif opcao == "8":
             aplicar_desconto_interativo(estoque)
