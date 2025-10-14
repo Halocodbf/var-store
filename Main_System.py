@@ -1,5 +1,5 @@
 from operacoes_venda import OperacoesVenda
-from discount import aplicar_desconto_interativo
+from discount import Preco, aplicar_desconto_interativo
 from relatorio import RegistroVendas
 from movimentacao import registrar_movimento, relatorio_estoque, historico_movimentos
 
@@ -18,7 +18,7 @@ class Produto:
     def __str__(self):
         return (f"Produto: {self.nome_produto} | Marca: {self.nome_marca} | "
                 f"Código: {self.codigo} | Categoria: {self.categoria} | "
-                f"Quantidade: {self.quantidade} | Preço: R${self.preco:,.2f} | "
+                f"Quantidade: {self.quantidade} | {self.preco.menu_info()} | " # LINHA MODIFICADA
                 f"Descrição: {self.descricao} | Fornecedor: {self.fornecedor}")
 
 
@@ -107,10 +107,11 @@ def cadastrar_produto_interativo():
     codigo = input("Código: ")
     categoria = input("Categoria: ")
     quantidade = obter_inteiro("Quantidade inicial: ")
-    preco = obter_float("Preço do produto (R$): ")
+    preco_valor = obter_float("Preço do produto (R$): ")
+    preco_objeto = Preco(preco_valor)
     descricao = input("Descrição: ")
     fornecedor = input("Fornecedor: ")
-    return Produto(nome_produto, nome_marca, codigo, categoria, quantidade, preco, descricao, fornecedor)
+    return Produto(nome_produto, nome_marca, codigo, categoria, quantidade, preco_objeto, descricao, fornecedor)
 
 
 # ==== Programa Principal ====
