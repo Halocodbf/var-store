@@ -8,3 +8,6 @@ Código dos participantes(RM):
 - Caique {563621}
 - Rickelmy {563286}
 - Luiz {565009}
+
+# Funcionalidade
+O arquivo Main_System é como a fonte onde tudo acontece, nós importamos funções nele para que suas mecânicas pudessem realizar as tarefas necessárias para o nosso processo de armazenamento de informações. Para vê-lo funcionar, basta rodá-lo e digitar as opções do menu. É importante destacar que é necessário que primeiro se realize o cadastro de um produto antes de usar as outras funções do código.
