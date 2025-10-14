@@ -72,7 +72,7 @@ class Estoque:
         for produto in self.produtos.values():
             print(produto)
             if produto.quantidade < 5:
-                print("⚠️ Estoque baixo!")
+                print("Estoque baixo!")
 
     def buscar_produto(self, codigo):
         return self.produtos.get(codigo, None)
