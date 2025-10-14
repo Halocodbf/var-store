@@ -28,6 +28,6 @@ def aplicar_desconto_interativo(estoque):
     codigo = input("Digite o código do produto para aplicar o desconto: ")
     try:
         percentual = float(input("Digite o percentual de desconto (ex: 10 para 10%): "))
-        estoque.aplicar_desconto(codigo, percentual)
+        estoque.aplicar_desconto_produto(codigo, percentual)
     except ValueError:
         print("Valor inválido. O percentual de desconto deve ser um número.")
