@@ -14,7 +14,8 @@ class OperacoesVenda:
             print("Produto não encontrado.")
             return
 
-        print(f"Produto: {produto.nome.nome_produto} | Estoque atual: {produto.quantidade.quantidade}")
+        print(f"Produto: {produto.nome_produto} | Estoque atual: {produto.quantidade}")
+
 
         try:
             quantidade = int(input("Digite a quantidade vendida: "))

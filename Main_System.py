@@ -76,6 +76,13 @@ class Estoque:
 
     def buscar_produto(self, codigo):
         return self.produtos.get(codigo, None)
+    
+    def aplicar_desconto_produto(self, codigo, percentual):
+        produto = self.buscar_produto(codigo)
+        if produto:
+            produto.preco.aplicar_desconto(percentual)
+        else:
+            print("Produto não encontrado.")
 
 
 # ==== Funções auxiliares ====
