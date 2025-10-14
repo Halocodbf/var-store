@@ -32,7 +32,7 @@ class OperacoesVenda:
             return
 
         produto.quantidade -= quantidade
-        valor_total = produto.preco * quantidade
+        valor_total = produto.preco.preco_final * quantidade
 
         # Salva a venda
         venda = {
@@ -40,7 +40,7 @@ class OperacoesVenda:
             "produto": produto.nome_produto,
             "codigo": produto.codigo,
             "quantidade": quantidade,
-            "preco_unitario": produto.preco,
+            "preco_unitario": produto.preco.preco_final,
             "valor_total": valor_total
         }
         self.vendas_realizadas.append(venda)
