@@ -149,6 +149,7 @@ if __name__ == "__main__":
         print("4 - Ajustar quantidade em estoque")
         print("5 - Listar produtos")
         print("6 - Buscar produto")
+        print("7 - vendas")
         print("0 - Sair")
         opcao = input("Escolha uma opção: ")
 
@@ -170,6 +171,10 @@ if __name__ == "__main__":
         elif opcao == "5":
             estoque.listar_produtos()
         elif opcao == "6":
+            codigo = input("Digite o código do produto: ")
+            produto = estoque.buscar_produto(codigo)
+            print(produto if produto else "Produto não encontrado.")
+        elif opcao == "7":
             codigo = input("Digite o código do produto: ")
             produto = estoque.buscar_produto(codigo)
             print(produto if produto else "Produto não encontrado.")
