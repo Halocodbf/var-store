@@ -18,7 +18,7 @@ class Produto:
     def __str__(self):
         return (f"Produto: {self.nome_produto} | Marca: {self.nome_marca} | "
                 f"Código: {self.codigo} | Categoria: {self.categoria} | "
-                f"Quantidade: {self.quantidade} | {self.preco.menu_info()} | " # LINHA MODIFICADA
+                f"Quantidade: {self.quantidade} | {self.preco.menu_info()} | "
                 f"Descrição: {self.descricao} | Fornecedor: {self.fornecedor}")
 
 
